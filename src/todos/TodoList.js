@@ -3,7 +3,7 @@ import TodoListItem from './TodoListItem'
 import NewTodoForm from "./NewTodoForm";
 import './TodoList.css'
 
-const TodoList = ({ todos = [] }) => (
+const TodoList = ({ todos = [{text: 'Buy cat food'}] }) => (
     <div className="list-wrapper">
         <NewTodoForm/>
         {todos.map(todo => <TodoListItem todo={todo}/>)}
