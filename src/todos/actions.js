@@ -27,7 +27,7 @@ export const loadTodosSuccess = todos => ({
     payload: { todos }
 })
 
-export const LOAD_TODOS_SUCCESS = 'LOAD_TODOS_SUCCESS';
+export const LOAD_TODOS_FAILURE = 'LOAD_TODOS_FAILURE';
 export const loadTodosFailure = () => ({
-    type: LOAD_TODOS_SUCCESS
+    type: LOAD_TODOS_FAILURE
 })
