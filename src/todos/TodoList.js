@@ -4,6 +4,7 @@ import NewTodoForm from './NewTodoForm';
 import TodoListItem from './TodoListItem';
 import {loadTodos, markTodoAsCompleteRequest, removeTodoRequest} from './thunks';
 import './TodoList.css';
+import {getTodos, getTodosLoading} from "./selectors";
 
 const TodoList = ({ todos = [], onRemovePressed, onCompletedPressed, isLoading, startLoadingTodos }) => {
     useEffect(() => {
@@ -24,8 +25,8 @@ const TodoList = ({ todos = [], onRemovePressed, onCompletedPressed, isLoading, 
 };
 
 const mapStateToProps = state => ({
-    isLoading: state.isLoading,
-    todos: state.todos,
+    isLoading: getTodosLoading(state),
+    todos: getTodos(state),
 });
 
 const mapDispatchToProps = dispatch => ({
